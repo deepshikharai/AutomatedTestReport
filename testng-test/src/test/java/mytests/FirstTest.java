@@ -76,7 +76,7 @@ public class FirstTest {
   }
 
   @Test
-  public void f() throws Exception {
+  public void f1() throws Exception {
 	  System.out.println("Page Title:"+driver.getTitle());
 		//driver.findElement(By.id("lst-ib")).sendKeys("Kubernetes");
 		//driver.findElement(By.id(pro.getProperty("searchbox"))).sendKeys(pro.getProperty("searchword"));//works
