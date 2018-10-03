@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package mytests;
 
 import org.testng.annotations.Test;
@@ -190,3 +191,6 @@ public class SparkMultiBrowserTest {
 	}
 
 }
+=======
+
+>>>>>>> refs/remotes/origin/master
