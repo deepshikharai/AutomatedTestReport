@@ -67,7 +67,8 @@ public class SparkMultiBrowserTest {
 			dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
 			dcp.setCapability("name", "PHP");
 			dcp.setCapability("idleTimeout", 150);
-			driver = new RemoteWebDriver(new URL("http://35.225.119.127:4444/wd/hub"),dcp);
+			//driver = new RemoteWebDriver(new URL("http://35.225.119.127:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		else if(browser.equalsIgnoreCase("chrome"))
 		{
@@ -85,7 +86,8 @@ public class SparkMultiBrowserTest {
 			dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
 			dcp.setCapability("name", "Spark");
 			dcp.setCapability("idleTimeout", 150);
-			driver = new RemoteWebDriver(new URL("http://35.225.119.127:4444/wd/hub"),dcp);
+			//driver = new RemoteWebDriver(new URL("http://35.225.119.127:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		
 		driver.get("https://www.spark.co.nz/shop/");
