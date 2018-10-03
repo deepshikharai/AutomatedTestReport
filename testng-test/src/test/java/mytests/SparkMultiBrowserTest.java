@@ -87,7 +87,7 @@ public class SparkMultiBrowserTest {
 			dcp.setCapability("name", "Spark");
 			dcp.setCapability("idleTimeout", 150);
 			driver = new RemoteWebDriver(new URL("http://35.225.119.127:4444/wd/hub"),dcp);
-			driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
+			//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		
 		driver.get("https://www.spark.co.nz/shop/");
