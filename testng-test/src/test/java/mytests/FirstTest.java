@@ -21,6 +21,7 @@ import org.testng.annotations.AfterTest;
 public class FirstTest {
 	WebDriver driver;
 	String url="https://www.google.com/";
+	String sparkUrl="https://www.spark.co.nz/shop/"
 	Properties pro;
 	WebDriverWait wait;
 	
@@ -37,11 +38,11 @@ public class FirstTest {
 			System.out.println("Exception is=="+e.getMessage());
 		}
 		DesiredCapabilities dcp = new DesiredCapabilities();
-		dcp.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
+		dcp.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
 		dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 		dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 		dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
-		dcp.setCapability("name", "GoogleTest");
+		dcp.setCapability("name", "SparkTest");
 		dcp.setCapability("idleTimeout", 150);
 		//driver = new RemoteWebDriver(new URL("http://35.193.7.170:4444/wd/hub"),dcp);
 		//System.out.println(pro.getProperty("selenium.url"));
@@ -51,8 +52,8 @@ public class FirstTest {
 		//Open browser instance
 		driver = new ChromeDriver();*/
 		wait = new WebDriverWait(driver,1000);
-		driver.get(url);
-		System.out.println("Opening Google");
+		driver.get(sparkUrl);
+		//System.out.println("Opening Google");
 		Thread.sleep(100);
 	}
 	
@@ -72,10 +73,13 @@ public class FirstTest {
 //		Cookie cookie = new Cookie("zaleniumTestPassed", "true");
 //	    driver.manage().addCookie(cookie);
 		Thread.sleep(100);
-	  
+	        System.out.println("allphones clicking");
+		WebElement allphones=(new WebDriverWait(driver,1200)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='quicklinks']/div[3]/a")));
+		allphones.click();
+	        System.out.println("allphones clicked");
   }
 
-  @Test
+  /*@Test
   public void f1() throws Exception {
 	  System.out.println("Page Title:"+driver.getTitle());
 		//driver.findElement(By.id("lst-ib")).sendKeys("Kubernetes");
@@ -92,12 +96,12 @@ public class FirstTest {
 //	    driver.manage().addCookie(cookie);
 		Thread.sleep(100);
 	  
-  }
+  }*/
   
 
   @AfterTest
   public void afterTest() throws Exception {
-	  System.out.println("Page Title:"+driver.getTitle());
+	  //System.out.println("Page Title:"+driver.getTitle());
 		//driver.findElement(By.id("lst-ib")).sendKeys("Kubernetes");
 		//driver.findElement(By.id(pro.getProperty("searchbox"))).sendKeys(pro.getProperty("searchword"));//works
 //		wait.until(ExpectedConditions.elementToBeClickable(By.id(pro.getProperty("searchbox")))).sendKeys(pro.getProperty("searchword"));
@@ -111,6 +115,7 @@ public class FirstTest {
 //		Cookie cookie = new Cookie("zaleniumTestPassed", "true");
 //	    driver.manage().addCookie(cookie);
 		Thread.sleep(100);
+	  driver.quit();
   }
 
 }
