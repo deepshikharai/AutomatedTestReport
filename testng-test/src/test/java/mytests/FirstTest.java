@@ -21,7 +21,7 @@ import org.testng.annotations.AfterTest;
 public class FirstTest {
 	WebDriver driver;
 	String url="https://www.google.com/";
-	String sparkUrl="https://www.spark.co.nz/shop/"
+	String sparkUrl="https://www.spark.co.nz/shop/";
 	Properties pro;
 	WebDriverWait wait;
 	
@@ -114,7 +114,7 @@ public class FirstTest {
 //		System.out.println("search clicked");
 //		Cookie cookie = new Cookie("zaleniumTestPassed", "true");
 //	    driver.manage().addCookie(cookie);
-		Thread.sleep(100);
+		//Thread.sleep(100);
 	  driver.quit();
   }
 
