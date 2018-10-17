@@ -23,14 +23,16 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.Parameters;
 
 public class SparkMultiBrowserTest {
 	
-	public String browser="chrome";
+	//public String browser="chrome";
 	public WebDriver driver;
 	 public int finalSeed;
 	@BeforeTest
-	public void browsers() throws IOException
+	@Parameters("browser")
+	public void browsers(String browser) throws IOException
 	{
 		/*Runtime.getRuntime().exec("taskkill /im chrome.exe /f");
 		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
