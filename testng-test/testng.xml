@@ -6,7 +6,7 @@
       <class name="mytests.FirstTest"/>
       <class name="mytests.SparkMultiBrowserTest"></class>
     </classes>
-  </test> <!-- Test -->-->
+  </test>--> <!-- Test -->
   <test name="ChromeTest">
   <parameter name="browser" value="chrome" />
   	<classes>
