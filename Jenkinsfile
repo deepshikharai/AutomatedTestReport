@@ -21,11 +21,16 @@ pipeline {
                 }
             }
           
-			stage('Delete all the images and containers') {
+	    stage('Delete all the images and containers') {
                 steps {
                          sh "sudo docker rm spark"
                          sh "sudo docker rmi -f sparktest"
                 }
-			}
-		}
+	    }
+	    stage('Results') {
+		 steps {
+            		junit '**/reports/*.xml'
+            	}
+        	}
+	    }
 }
