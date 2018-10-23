@@ -5,7 +5,7 @@ pipeline {
 				steps {
 					git 'https://github.com/pramila-git/docker-report.git'
 					dir ('docker-report'){
-						sudo docker build 
+						sudo docker build\
 							--build-arg url=https://github.com/pramila-git/AutomatedTestReport.git\
 							--build-arg path=AutomatedTestReport/testng-test\
 							--build-arg folder=reports\
