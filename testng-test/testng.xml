@@ -7,17 +7,17 @@
       <class name="mytests.SparkMultiBrowserTest"></class>
     </classes>
   </test>--> <!-- Test -->
-  <test name="ChromeTest" parallel="classes">
+  <test name="ChromeTest">
   <parameter name="browser" value="chrome"/>
   	<classes>
-  		<class name="mytests.SparkMultiBrowserTest"/>
+  		<!--<class name="mytests.SparkMultiBrowserTest"/>-->
       <class name="mytests.FirstTest"/>
   	</classes>
   </test>
   <test name="FirefoxTest" parallel="classes">
   <parameter name="browser" value="firefox" />
   	<classes>
-  		<class name="mytests.SparkMultiBrowserTest"/>
+  		<!--<class name="mytests.SparkMultiBrowserTest"/>-->
       <class name="mytests.FirstTest"/>
   	</classes>
   </test> 
