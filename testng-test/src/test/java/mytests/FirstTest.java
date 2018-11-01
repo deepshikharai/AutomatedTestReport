@@ -18,13 +18,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
+
 
 
 
 public class FirstTest {
 	public WebDriver driver;
 	 public int finalSeed;
-	@BeforeTest
+	@BeforeClass
 	@Parameters("browser")
 	public void browsers(String browser) throws IOException
 	{
@@ -61,7 +65,7 @@ public class FirstTest {
 			dcp.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
 			dcp.setCapability(CapabilityType.SUPPORTS_APPLICATION_CACHE, true);
 			dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
-			dcp.setCapability("name", "Spark");
+			dcp.setCapability("name", "mercury tours");
 			dcp.setCapability("idleTimeout", 150);
 			//driver = new RemoteWebDriver(new URL("http://35.187.87.222:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL("http://104.199.94.18:4444/wd/hub"),dcp);
