@@ -71,7 +71,8 @@ public class SparkMultiBrowserTest {
 			dcp.setCapability("idleTimeout", 150);
 			//driver = new RemoteWebDriver(new URL("http://35.187.87.222:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL("http://104.199.94.18:4444/wd/hub"),dcp);
-			driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
+			//driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL("http://35.231.161.229:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		else if(browser.equalsIgnoreCase("chrome"))
@@ -90,7 +91,8 @@ public class SparkMultiBrowserTest {
 			dcp.setCapability(CapabilityType.SUPPORTS_NETWORK_CONNECTION, true);
 			dcp.setCapability("name", "Spark");
 			dcp.setCapability("idleTimeout", 150);
-			driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
+			//driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL("http://35.231.161.229:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		
