@@ -72,7 +72,7 @@ public class FirstTest {
 			//driver = new RemoteWebDriver(new URL("http://104.199.94.18:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL("http://35.231.161.229:4444/wd/hub"),dcp);
-			driver = new RemoteWebDriver(new URL("http://35.229.108.82:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL("http://35.231.203.123:4444/wd/hub"),dcp);
 			
 			//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
@@ -94,7 +94,7 @@ public class FirstTest {
 			dcp.setCapability("idleTimeout", 150);
 			//driver = new RemoteWebDriver(new URL("http://104.197.155.22:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL("http://35.231.161.229:4444/wd/hub"),dcp);
-			driver = new RemoteWebDriver(new URL("http://35.229.108.82:4444/wd/hub"),dcp);
+			driver = new RemoteWebDriver(new URL("http://35.231.203.123:4444/wd/hub"),dcp);
 			//driver = new RemoteWebDriver(new URL(pro.getProperty("selenium.url")),dcp);
 		}
 		
