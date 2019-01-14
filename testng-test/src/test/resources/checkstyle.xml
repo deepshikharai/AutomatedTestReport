@@ -45,7 +45,7 @@ under the License.
     <!-- See http://checkstyle.sf.net/config_header.html -->
     <module name="RegexpHeader">
       <property name="fileExtensions" value="java"/>
-      <property name="headerFile" value="${checkstyle.header.file}"/>
+      <!-- <property name="headerFile" value="${checkstyle.header.file}"/>-->
     </module>
 
     <module name="FileTabCharacter">
@@ -60,7 +60,7 @@ under the License.
 
     <module name="TreeWalker">
 
-        <property name="cacheFile" value="${checkstyle.cache.file}"/>
+        <!--<property name="cacheFile" value="${checkstyle.cache.file}"/>-->
 
         <property name="tabWidth" value="4"/>
 
